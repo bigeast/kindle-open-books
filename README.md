@@ -44,7 +44,8 @@ List of Recipes in `calibre-recipes` Folder
 + AngularJS_Tutorial_Cn.recipe - [AngularJS入门教程](http://www.ituring.com.cn/minibook/303)
 + Git_Community_Book.recipe - [Git Community Book 中文版](http://gitbook.liuhui998.com/)
 + Pro_Git_ZH.recipe - [Pro Git 简体中文版](http://iissnan.com/progit/)
-
++ Yin_Wang\'s_Blog - [王垠的博客](http://www.yinwang.org)
+	
 # Usage
 
 ## GUI

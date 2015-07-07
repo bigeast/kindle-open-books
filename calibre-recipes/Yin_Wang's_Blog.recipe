@@ -1,0 +1,23 @@
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class IntroductionToLinux(BasicNewsRecipe):
+    title = 'Yin_Wang\'s_Blog'
+    __author__ = 'bigeast'
+    description = 'Yin_Wang\'s_Blog'
+    timefmt = '[%Y-%m-%d]'
+    no_stylesheets = True
+    url_prefix = 'http://www.yinwang.org/'
+
+    def parse_index(self):
+        soup = self.index_to_soup(self.url_prefix)
+        lg = soup.find('ul', {'class': 'list-group'})
+        articles = []
+
+        for tag in lg.findAll('li'):
+            title = tag.a.contents[0].strip()
+            url = tag.a['href']
+            article = {'title': title, 'url': url}
+            articles.append(article)
+        ans = [('Yin_Wang\'s_Blog', articles)]
+
+        return ans
